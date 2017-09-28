@@ -23,11 +23,11 @@ class zabbix_tools:
     7、update_host支持的参数为host_name, template_add_id, groupid, template_clear_id。其中host_name为必须提供参数，更新操作一次只能更新一个参数。
     '''
     def __init__(self):
-        self.url = 'http://zabbix.rlwops.com/api_jsonrpc.php'
+        self.url = 'http://192.168.1.100/api_jsonrpc.php'
         self.headers = {"Content-Type": "application/json"}
         self.session = requests.Session()
         self.zabbix_user = "Admin"
-        self.zabbix_pwd = "Z5BlWvyiSRqHQJe9aI4r"
+        self.zabbix_pwd = "admin"
         self.authID = self.user_login()
 
     def user_login(self):
